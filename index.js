@@ -1,22 +1,30 @@
-//Default Parameters
-//Case
-function sub(x,y){
-    return x-y;
-}
-//Solution 1
-function add(x, y){
-    if(y === undefined){
-        y = 0;
+//Objects
+const user = {
+    name:"Ryan",
+    lastname:"Perez",
+    age:30,
+    address:{
+        county: 'mexico',
+        city:'cdmx',
+        street:'main street 111'
+    },
+    friends:['brandom','elena'],
+    active:true,
+    sendMail : function () {
+        return 'sending email ...'
+    },
+    writeMail() {
+        return 'write email ...'
     }
-    return x + y;
-}
-//Solution 2
-function aDD(x,y=0){
-    return x+y;
 }
 
-console.log(sub(23));
-console.log(add(15));
-console.log(add(15,undefined));
-console.log(aDD(13));
-console.log(aDD(13,2));
+console.log(user);
+console.log(user.name);
+console.log(user.address);
+console.log(user.address.city);
+console.log(user.friends);
+console.log(user.active);
+console.log(user.sendMail);
+console.log(user.sendMail());
+console.log(user.writeMail);
+console.log(user.writeMail());
