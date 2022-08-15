@@ -1,35 +1,13 @@
-function hello(){
-    console.log("hola mundo");
-    console.log('work with JS');
+
+//Funtion Parameter
+ function hello(name){
+    return 'Hola ' + name;
+}
+function add(x, y){
+    return x+y;
 }
 
-function hello2(){
-    return 'hola return';
-}
-function helloBool(){
-    return true
-}
-function helloArr(){
-    return [1, 2,2 ];
-
-}
-//Object
-function helloObj(){
-    return {name:ryan}
-}
-//funtion returned
- function helloReturn(){
-    return function () {
-        return 'hola mundo returnada';
-    }
- }
-
-hello();
-const result = hello2();
-console.log(result);
-console.log(hello2());
-console.log(helloBool());
-console.log(helloArr());
-//Fundamentals fo Funtional Programming
-console.log(helloReturn());
-console.log(helloReturn()());
+console.log(hello('Ryan'));
+console.log(hello('Machile'));
+console.log(add(5,6));
+console.log(add(15,6));
