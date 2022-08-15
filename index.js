@@ -1,31 +1,28 @@
-//Anonymous Functions
-//Funcion establecida
-function start(){
-    return "Starting ... "
+//Arrow Functions
+
+//Example 
+function add1(x,y){
+    return x+y
 }
 
-console.log(start())
+const add2 = (x,y)=>{
+    return x+y
+}
+console.log(add1(5,5));
+console.log(add2(2,2));
 
-//Funcion anonima
-console.log(function (){
-    return "Starting anonymous"
-}())
-
-//Example
-//Mode 1 without anonymous function
+//Mode 1
 const button1 = document.createElement('button');
 button1.innerText = 'click me 1'
-
-function handleClick(){
-    alert('clicked 1');
-} 
-button1.addEventListener('click',handleClick);
+button1.addEventListener('click', function(){
+    alert('clicked 2')
+})
 document.body.append(button1)
 
-//Mode 2 with anonymous fucntion
+//Mode 2 
 const button2 = document.createElement('button');
 button2.innerText = 'click me 2'
-button2.addEventListener('click', function(){
+button2.addEventListener('click', () =>{
     alert('clicked 2')
 })
 document.body.append(button2);
