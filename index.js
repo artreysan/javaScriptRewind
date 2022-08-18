@@ -1,20 +1,16 @@
-//Inline Arrow Functions
+//Return on Functions
 
-//Example 
+const button = document.createElement('button');
+button.innerText = 'click me 2'
 
-//retorna un texto "Hola mundo"
-const showText = () => "Hola mundo"
-//Retorna un numero
-const showNumber = () => 22;
-//Retorn un boolean 
-const showBoolean = () => true;
-//Retorna un Array
-const showArray = () => [1,2,3]
-//Retorna un objeto
-const showObject = () => ({name:'Ryan',lastname:'Juarez'}) 
+const isAuthorized = false;
 
-console.log(showText());
-console.log(showNumber());
-console.log(showBoolean());
-console.log(showArray());
-console.log(showObject());
+button.addEventListener('click', () =>{
+    if(isAuthorized){
+        return alert('is Authorized')
+    }
+    
+    alert('is not Authorized')
+})
+
+document.body.append(button)
