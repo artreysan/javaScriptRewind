@@ -1,9 +1,13 @@
-//Return on Functions
+//String literals
+
+const background = 'yellow';
+const color = 'black';
+const isAuthorized = true;
 
 const button = document.createElement('button');
-button.innerText = 'click me 2'
+button.innerText = 'click me'
+button.style = `background: ${isAuthorized === true ? 'green': 'red'}; color: ${color}`
 
-const isAuthorized = false;
 
 button.addEventListener('click', () =>{
     if(isAuthorized){
