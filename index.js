@@ -1,6 +1,7 @@
 // Ecmascript
-import {add,multiply,title,active,points} from './add.js'
+//Default export
+import addModule from './add'
 
-console.log(add(10,20))
-console.log(multiply(10,20))
-console.log(active,title,points)
+//Default export
+console.log(addModule)
+
