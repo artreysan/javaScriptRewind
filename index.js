@@ -1,32 +1,13 @@
-//Spread Operator 
-const names = ['ryan','joe','maria']
-const newNames = ['marco', 'mario', 'john']
+// Ecmascript
+// Create file add.js
+// Import file in this file
+import {add} from './add.js'
 
-//Method with CONCAT 
-console.log('============================================')
-console.log(names.concat(newNames))
+// Modify index.html from this:
+// <script src="./index.js"></script>
 
-//Spread Operation
-console.log('============================================')
-console.log([...names,...newNames])
+// to this: 
+// <script type = "module" src="./index.js"></script>
 
-
-//Aplication
-const user = {
-    name:"ryan",
-    lastname:"ray"
-}
- const address = {
-    street : 'main street 123',
-    city: 'mexico'
- }
-
-
-const userInfo={
-    ...user,
-    ...address
-}
-
-console.log(user)
-console.log(address)
-console.log(userInfo)
+//Used the funtion exported
+console.log(add(10,20))
