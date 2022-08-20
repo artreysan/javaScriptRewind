@@ -1,19 +1,41 @@
-// Optional Chaining 
+// Async Await 
 
-const person = {
-    name: 'ryan',
-    address: {
-        city: 'london'
-    }
+const ul = document.createElement('ul')
+const li = document.createElement('li')
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Codido asincrono
+/*
+            let data = fetch('https://jsonplaceholder.typicode.com/posts').then(function (response){
+                console.log(response)
+                return response.json()
+            }).then(function(data){
+                console.log(data)
+                data.forEach(function(post){
+                    const li = document.createElement('li');
+                    li.innerText = post.title
+                    ul.append(li)
+                })
+                document.body.append(ul);
+            })
+            console.log('linea dos')
+*/
+
+//Sintax Moderm Async/Await
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+async function loadData(){
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const data = await response.json()
+
+    data.forEach((element) => {
+       const li = document.createElement('li'); 
+       li.innerText = element.title;
+       ul.append(li)
+    }); 
+    document.body.append(ul);
 }
 
-// Problem long
-//If existiong 'location' print
-if (person.location){
-    console.log(person.location.city)
-}
+loadData()
 
-// Optional short solution 
-console.log(person.location?.city)
-
-
+console.log('linea dos')
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
